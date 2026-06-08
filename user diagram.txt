@@ -1,0 +1,63 @@
+# One-Stop Personalized Career and Education Advisor
+
+## Use Case Diagram
+
+### Actors
+- User
+- Admin
+
+### User Use Cases
+- Register
+- Login
+- Complete Profile
+- Take Skill Assessment
+- View Career Recommendations
+- View Course Recommendations
+- View Certification Suggestions
+- Track Progress
+- Access Learning Resources
+
+### Admin Use Cases
+- Manage Users
+- Manage Career Paths
+- Manage Courses
+- Manage Certifications
+- Generate Reports
+
+## Mermaid Use Case Diagram
+
+```mermaid
+flowchart LR
+
+    User([User])
+    Admin([Admin])
+
+    UC1((Register/Login))
+    UC2((Complete Profile))
+    UC3((Take Skill Assessment))
+    UC4((View Career Recommendations))
+    UC5((View Course Recommendations))
+    UC6((View Certifications))
+    UC7((Track Progress))
+    UC8((Access Learning Resources))
+
+    AC1((Manage Users))
+    AC2((Manage Career Paths))
+    AC3((Manage Courses))
+    AC4((Manage Certifications))
+    AC5((Generate Reports))
+
+    User --> UC1
+    User --> UC2
+    User --> UC3
+    User --> UC4
+    User --> UC5
+    User --> UC6
+    User --> UC7
+    User --> UC8
+
+    Admin --> AC1
+    Admin --> AC2
+    Admin --> AC3
+    Admin --> AC4
+    Admin --> AC5
