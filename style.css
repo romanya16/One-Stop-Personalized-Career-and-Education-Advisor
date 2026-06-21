@@ -73,3 +73,26 @@ footer {
     text-align: center;
     padding: 15px;
 }
+#student-form {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#student-form input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#student-form button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#student-form button:hover {
+    background-color: darkblue;
+}
