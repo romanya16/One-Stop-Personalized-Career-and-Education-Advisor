@@ -25,7 +25,8 @@ document.getElementById("studentForm").addEventListener("submit", function(event
         course = "Full Stack Web Development";
         career = "Frontend Web Developer";
     }
-    else if (interest.includes("design")) {
+    else if (skill.includes("design")) ||
+    interest.includes("design"){
         course = "UI/UX Design";
         career = "UI/UX Designer";
     }
