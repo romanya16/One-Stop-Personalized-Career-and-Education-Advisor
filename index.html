@@ -61,21 +61,8 @@
         <p>© 2026 Student Career Guidance. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById("studentForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value;
-            let skill = document.getElementById("skill").value;
-            let interest = document.getElementById("interest").value;
-
-            document.getElementById("result").innerHTML =
-                "<h3>Student Details</h3>" +
-                "<p><strong>Name:</strong> " + name + "</p>" +
-                "<p><strong>Skill:</strong> " + skill + "</p>" +
-                "<p><strong>Interest:</strong> " + interest + "</p>";
-        });
-    </script>
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
 
 </body>
 </html>
