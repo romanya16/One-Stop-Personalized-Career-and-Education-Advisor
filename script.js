@@ -3,39 +3,54 @@ document.getElementById("studentForm").addEventListener("submit", function(event
 
     let name = document.getElementById("name").value;
     let skill = document.getElementById("skill").value.toLowerCase();
-    let interest = document.getElementById("interest").value;
+    let interest = document.getElementById("interest").value.toLowerCase();
 
     let course = "";
     let career = "";
 
-    if (skill === "java") {
-        course = "Advanced Java & Spring Boot";
-        career = "Java Developer";
-    } 
-    else if (skill === "python") {
-        course = "Data Science & Machine Learning";
-        career = "AI Engineer";
-    } 
-    else if (skill === "html" || skill === "css") {
+    // Recommendation Logic
+    if (skill.includes("java")) {
+        course = "Java Full Stack Development";
+        career = "Software Developer";
+    }
+    else if (skill.includes("python")) {
+        course = "Python for Data Science";
+        career = "Data Scientist";
+    }
+    else if (
+        skill.includes("html") ||
+        skill.includes("css") ||
+        skill.includes("javascript")
+    ) {
         course = "Full Stack Web Development";
-        career = "Web Developer";
-    } 
-    else if (skill === "c++") {
-        course = "Software Engineering";
-        career = "Software Engineer";
-    } 
+        career = "Frontend Web Developer";
+    }
+    else if (interest.includes("design")) {
+        course = "UI/UX Design";
+        career = "UI/UX Designer";
+    }
+    else if (interest.includes("marketing")) {
+        course = "Digital Marketing";
+        career = "Digital Marketing Executive";
+    }
+    else if (interest.includes("business")) {
+        course = "Business Management";
+        career = "Business Analyst";
+    }
     else {
-        course = "General Career Guidance";
-        career = "Career Counselor Recommendation";
+        course = "Career Guidance Program";
+        career = "Career Counselling Recommended";
     }
 
-    document.getElementById("result").innerHTML =
-        "<h3>Student Details</h3>" +
-        "<p><b>Name:</b> " + name + "</p>" +
-        "<p><b>Skill:</b> " + skill + "</p>" +
-        "<p><b>Interest:</b> " + interest + "</p>" +
-        "<hr>" +
-        "<h3>Recommendation</h3>" +
-        "<p><b>Recommended Course:</b> " + course + "</p>" +
-        "<p><b>Recommended Career:</b> " + career + "</p>";
+    document.getElementById("result").innerHTML = `
+        <h3>Student Details</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Skill:</strong> ${skill}</p>
+        <p><strong>Interest:</strong> ${interest}</p>
+        <hr>
+        <h3>Recommended Course</h3>
+        <p>${course}</p>
+        <h3>Recommended Career</h3>
+        <p>${career}</p>
+    `;
 });
