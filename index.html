@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>Student Career Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,25 +12,26 @@
         <h2>Student Career Guidance</h2>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Student Profile</a></li>
+            <li><a href="#student-form">Skill Form</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <h1>Welcome to Student Career Guidance Portal</h1>
-<p>Helping students discover their skills, interests, and suitable career paths.</p>
+        <p>Helping students discover their skills, interests, and suitable career paths.</p>
         <button>Get Started</button>
     </section>
 
     <section id="about">
-    <h2>Student Profile</h2>
-    <p>
-        This section displays the student's profile, including their skills,
-        interests, and career goals. It helps identify suitable career paths
-        based on the student's strengths and preferences.
-    </p>
-</section>
+        <h2>Student Profile</h2>
+        <p>
+            This section displays the student's profile, including their skills,
+            interests, and career goals. It helps identify suitable career paths
+            based on the student's strengths and preferences.
+        </p>
+    </section>
 
     <section id="student-form">
         <h2>Student Skill Form</h2>
@@ -52,13 +53,29 @@
     </section>
 
     <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:rromanya99@gmail.com">rromanya99@gmail.com</a></p>
-</section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rromanya99@gmail.com">rromanya99@gmail.com</a></p>
+    </section>
 
     <footer>
-        <p>© 2026Student Career Guidance. All Rights Reserved.</p>
+        <p>© 2026 Student Career Guidance. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let skill = document.getElementById("skill").value;
+            let interest = document.getElementById("interest").value;
+
+            document.getElementById("result").innerHTML =
+                "<h3>Student Details</h3>" +
+                "<p><strong>Name:</strong> " + name + "</p>" +
+                "<p><strong>Skill:</strong> " + skill + "</p>" +
+                "<p><strong>Interest:</strong> " + interest + "</p>";
+        });
+    </script>
 
 </body>
 </html>
