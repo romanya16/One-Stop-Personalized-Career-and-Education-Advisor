@@ -43,17 +43,26 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     }
 
     document.getElementById("result").innerHTML = `
-        <h3>Student Details</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Skill:</strong> ${skill}</p>
-        <p><strong>Interest:</strong> ${interest}</p>
+    <div style="background:#ffffff;
+                padding:20px;
+                border-radius:12px;
+                box-shadow:0 4px 10px rgba(0,0,0,0.2);
+                margin-top:20px;">
+
+        <h2 style="color:#0d6efd;">🎓 Student Career Report</h2>
+
+        <p><strong>👤 Name:</strong> ${name}</p>
+        <p><strong>💻 Skill:</strong> ${skill}</p>
+        <p><strong>🎯 Interest:</strong> ${interest}</p>
 
         <hr>
 
-        <h3>Recommended Course</h3>
+        <h3 style="color:green;">📚 Recommended Course</h3>
         <p>${course}</p>
 
-        <h3>Recommended Career</h3>
+        <h3 style="color:#ff6600;">💼 Recommended Career</h3>
         <p>${career}</p>
+
+    </div>
     `;
 });
