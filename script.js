@@ -9,7 +9,6 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     let career = "";
 
     // Smart Recommendation
-
     if (skill.includes("java") && interest.includes("web")) {
         course = "Java Full Stack Development";
         career = "Full Stack Developer";
@@ -79,20 +78,23 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     document.getElementById("result").innerHTML = `
         <div style="background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.2);margin-top:20px;">
 
-        <h2>🎓 Student Career Report</h2>
+            <h2>🎓 Student Career Report</h2>
 
-        <p><strong>👤 Name:</strong> ${name}</p>
-        <p><strong>💻 Skill:</strong> ${skill}</p>
-        <p><strong>🎯 Interest:</strong> ${interest}</p>
+            <p><strong>👤 Name:</strong> ${name}</p>
+            <p><strong>💻 Skill:</strong> ${skill}</p>
+            <p><strong>🎯 Interest:</strong> ${interest}</p>
 
-        <hr>
+            <hr>
 
-        <h3>📚 Recommended Course</h3>
-        <p>${course}</p>
+            <h3>📚 Recommended Course</h3>
+            <p>${course}</p>
 
-        <h3>💼 Recommended Career</h3>
-        <p>${career}</p>
+            <h3>💼 Recommended Career</h3>
+            <p>${career}</p>
 
         </div>
     `;
+
+    // Automatically clear the form after submit
+    document.getElementById("studentForm").reset();
 });
