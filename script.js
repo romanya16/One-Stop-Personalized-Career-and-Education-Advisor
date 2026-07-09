@@ -25,16 +25,15 @@ document.getElementById("studentForm").addEventListener("submit", function(event
         course = "Full Stack Web Development";
         career = "Frontend Web Developer";
     }
-    else if (skill.includes("design")) ||
-    interest.includes("design"){
+    else if (skill.includes("design") || interest.includes("design")) {
         course = "UI/UX Design";
         career = "UI/UX Designer";
     }
-    else if (interest.includes("marketing")) {
+    else if (skill.includes("marketing") || interest.includes("marketing")) {
         course = "Digital Marketing";
         career = "Digital Marketing Executive";
     }
-    else if (interest.includes("business")) {
+    else if (skill.includes("business") || interest.includes("business")) {
         course = "Business Management";
         career = "Business Analyst";
     }
@@ -48,9 +47,12 @@ document.getElementById("studentForm").addEventListener("submit", function(event
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Skill:</strong> ${skill}</p>
         <p><strong>Interest:</strong> ${interest}</p>
+
         <hr>
+
         <h3>Recommended Course</h3>
         <p>${course}</p>
+
         <h3>Recommended Career</h3>
         <p>${career}</p>
     `;
